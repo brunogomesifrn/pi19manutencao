@@ -1,0 +1,35 @@
+body
+{
+background-color: #E6E6E6;
+}
+h1, h2
+{
+	color: white; 
+}
+.d1
+{
+	color: white;
+	border: 1px solid black;
+	width: 500px;
+	margin-left: 50px;
+	float: left;
+	background-color: #585858;;
+}
+.d2
+{
+	color: white;
+	border: 1px solid black;
+	width: 500px;
+	margin-left: 50px;
+	float: left;
+	background-color:#070719;
+}
+.d3
+{
+	color: white;
+	border: 1px solid black;
+	width: 500px;
+	margin-left: 50px;
+	float: left;
+	background-color:#070719;
+}

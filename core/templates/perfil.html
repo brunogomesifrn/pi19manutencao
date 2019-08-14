@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Página de Perfil</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo2.css' %}">
+</head>
+<body>
+<h1>Página de Perfil</h1>
+<h2>Olá {{ user.username }}</h2>
+
+<div class="d1">
+<p><a href="{% url 'dados' user.id %}"> Meus dados</a></p>
+</div>
+
+<div class="d2">
+<p><a href="{% url 'logout' %}">Sair</a></p>
+</div>
+
+</body>
+</html>

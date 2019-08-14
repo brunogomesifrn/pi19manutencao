@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Página de Login</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo2.css' %}">
+</head>
+<body>
+<h1>Página de Login</h1>
+<form method="post">
+{% csrf_token %}
+
+<div class="d1">
+<p> Usuário: {{ form.username }} </p>
+<p> Senha: {{ form.password }} </p>
+</div>
+
+<div class="d2">
+<p><button type="submit">Login</button></p>
+<p><button type="submit">Voltar</button></p>
+</div>
+
+</form>
+</body>
+</html>
