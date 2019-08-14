@@ -1,0 +1,54 @@
+.principal
+{ 
+margin: 0 auto;
+width: 750px;
+border: 1px solid black
+}
+.superior
+{ 
+background: #D8D8D8;
+padding: 1px;
+}
+.descricao
+{ 
+background: #070719;
+padding: 1px;
+}
+.sobre
+{ 
+float: left;
+width: 400px;
+
+background: #585858;
+}
+.cadastro
+{
+ float: left;
+width: 350px;
+padding-bottom:250px;
+background: #070719;
+}
+.rodape
+{ 
+clear: both;
+background: #D8D8D8;
+padding: 1px;
+}
+p
+{
+	color: #FFFFFF;
+}
+p.a
+{
+	color: #070719;
+}
+p.r
+{
+	color: #070719;
+	text-align: center;
+}
+h3, h2, p.cor
+{
+	color: #58ACFA
+
+}
