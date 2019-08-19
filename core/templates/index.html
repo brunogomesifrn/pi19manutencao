@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -7,12 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap 1 Template</title>
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/font-awesome.css" />
-  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
-  <link rel="stylesheet" href="css/style.css">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css" />
+
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" type="text/css" />
+
+  <link rel="stylesheet" href="{% static 'js/fancybox/jquery.fancybox.css' %}" type="text/css" media="screen" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/isotope.css' %}" media="screen" />
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/>
   <!-- =======================================================
     Theme Name: Hidayah
     Theme URL: https://bootstrapmade.com/hidayah-free-simple-html-template-for-corporate/
@@ -48,7 +54,7 @@
   </header>
 
   <div class="slider text-center">
-    <img src="img.jpg" alt="manutenção" height="550" width="" />
+    <img src="{% static 'img.jpg' %}" alt="manutenção" height="550" width="" />
   </div>
 
   <div class="slider text-center">
@@ -154,12 +160,12 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/fancybox/jquery.fancybox.pack.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/functions.js"></script>
-  <script type="text/javascript">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+  <script src="{% static 'js/fancybox/jquery.fancybox.pack.js' %}"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script src="{% static 'js/functions.js' %}"></script>
+  <script type="{% static 'text/javascript' %}">
     new WOW().init();
   </script>
 
