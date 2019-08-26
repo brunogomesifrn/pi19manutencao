@@ -12,8 +12,11 @@
 	{% csrf_token %}
 	<div class="d1">
 
+	{{form.username.errors}}
 	<p> Usuário: {{ form.username }}</p>
+	{{form.password1.errors}}
 	<p> Senha: {{ form.password1 }}</p>
+	{{form.password2.errors}}
 	<p> Repetir a senha: {{ form.password2 }}</p>
 	<p><button type="submit">Salvar</button></p>
 
