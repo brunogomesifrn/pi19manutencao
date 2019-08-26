@@ -1,6 +1,6 @@
 body
 {
-background-color: #E6E6E6;
+background-image:  url("/static/img1.jpg");
 }
 h1, h2
 {
@@ -9,27 +9,24 @@ h1, h2
 .d1
 {
 	color: white;
-	border: 1px solid black;
+	border: 1px;
 	width: 500px;
 	margin-left: 50px;
 	float: left;
-	background-color: #585858;;
 }
 .d2
 {
 	color: white;
-	border: 1px solid black;
+	border: 1px;
 	width: 500px;
 	margin-left: 50px;
 	float: left;
-	background-color:#070719;
 }
 .d3
 {
 	color: white;
-	border: 1px solid black;
+	border: 1px;
 	width: 500px;
 	margin-left: 50px;
 	float: left;
-	background-color:#070719;
 }
