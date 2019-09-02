@@ -6,15 +6,7 @@ h1, h2
 {
 	color: white; 
 }
-.d1
-{
-	color: white;
-	border: 1px;
-	width: 500px;
-	margin-left: 50px;
-	float: left;
-}
-.d2
+.d1, a
 {
 	color: white;
 	border: 1px;
