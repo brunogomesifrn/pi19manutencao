@@ -8,11 +8,25 @@
 </head>
 <body>
 <h1>Página de Perfil</h1>
-<h2>Olá {{ user.username }}</h2>
+<h2>Olá {{ user.username }}, caso queira tirar alguma dúdiva se sinta a vontade para fazer perguntas</h2>
+
+<p>{{form.pergunta.label}}: {{form.pergunta}}</p>
+<p>{{form.resposta.label}}: {{form.resposta}}</p>
+<button type="submit">Enviar pergunta</button>
+
+
+<p>lista de perguntas:</p>
+{% for pergunta in lista_perguntas %}
+
+
+{% empty %}
+<p>nenhuma pergunta cadastrada</p>
+{% endfor %}
 
 <div class="d1">
 <p><a href="{% url 'dados' user.id %}"> Meus dados</a></p>
 </div>
+
 
 <div class="d1">
 <p><a href="{% url 'logout' %}">Sair</a></p>
