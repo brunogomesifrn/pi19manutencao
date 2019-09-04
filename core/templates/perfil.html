@@ -16,9 +16,8 @@
 </div>
 
 <p>lista de perguntas:</p>
-{% for pergunta in lista_perguntas %}
-
-
+{% for forum in lista_forum %}
+	{{forum.pergunta}}
 {% empty %}
 <p>nenhuma pergunta cadastrada</p>
 {% endfor %}

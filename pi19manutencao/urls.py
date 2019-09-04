@@ -19,6 +19,7 @@ from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastra
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+
     path('cadastrar_pergunta', cadastrar_pergunta, name='cadastrar_pergunta'),
     path('pergunta', pergunta_listar, name='pergunta'),
 	path('', index, name='index'),

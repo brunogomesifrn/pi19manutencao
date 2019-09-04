@@ -11,14 +11,14 @@ def index(request):
 
 @login_required
 def perfil(request):
-	resposta = Forum.objects.all()
+	pergunta = Forum.objects.all()
 	contexto = {
-		'lista_perguntas': resposta
+		'lista_forum': pergunta
 	}
 	return render(request, 'perfil.html', contexto)
 
 	if User.is_superuser==1:
-		return render(request, "index.html")
+		return render(request, "perfiladmin.html")
 	else:
 		return render(request, "perfil.html")
 
@@ -35,9 +35,9 @@ def cadastro(request):
 #aqui eu não tenho certeza, tô vendo uns vídeos, mas não deu certo tudo
 
 def pergunta_listar(request, id):
-	resposta = Forum.objects.all()
+	pergunta = Forum.objects.all()
 	contexto = {
-		'lista_perguntas': resposta
+		'lista_forum': pergunta
 	}
 	return render(request, 'perfil.html', contexto)
 
