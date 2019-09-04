@@ -11,7 +11,16 @@ def index(request):
 
 @login_required
 def perfil(request):
-	return render(request, "perfil.html")
+	resposta = Forum.objects.all()
+	contexto = {
+		'lista_perguntas': resposta
+	}
+	return render(request, 'perfil.html', contexto)
+
+	if User.is_superuser==1:
+		return render(request, "index.html")
+	else:
+		return render(request, "perfil.html")
 
 def cadastro(request):
 	form = UserCreationForm(request.POST or None)
@@ -37,14 +46,15 @@ def cadastrar_pergunta(request):
 		form = ForumForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return redirect('pergunta_listar')
+			return redirect('perfil')
 	else:
-		form ForumForm()
-		contexto = {
+		form = ForumForm()
+	
+	contexto = {
 			'form' : form
 		}
 	
-	return render(request, 'perfil.html', contexto)
+	return render(request, 'cadastrar_pergunta.html', contexto)
 
 
 # vai ate aqui em cima

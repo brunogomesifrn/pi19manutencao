@@ -8,7 +8,9 @@
 <h1>Perguntas</h1>
 <form method="post">
 	{% csrf_token %}
-	{{ form }}
+	<p>{{form.pergunta.label}}: {{form.pergunta}}</p>
+
+
 <button type="submit">salvar</button>
 </form>
 
