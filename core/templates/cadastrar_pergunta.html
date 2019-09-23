@@ -9,9 +9,15 @@
 <form method="post">
 	{% csrf_token %}
 	<p>{{form.pergunta.label}}: {{form.pergunta}}</p>
+	<button type="submit">salvar</button>
+
+	{% if user.is_superuser %}
+	<p>{{form.resposta.label}}: {{form.resposta}}</p>
+	<button type="submit">salvar</button>
+	% endif %}
 
 
-<button type="submit">salvar</button>
+
 </form>
 
 </body>
