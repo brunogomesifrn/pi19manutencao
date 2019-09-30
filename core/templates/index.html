@@ -63,7 +63,7 @@
   <div class="slider text-center">
     <img src="{% static 'img.jpg' %}" alt="manutenção" height="550" width="" />
   </div>
-
+{% if not user.is_authenticated %}
   <div class="slider text-center">
     <p>SERVIÇOS OFERECIDOS</p>
   </div>
@@ -114,6 +114,14 @@
         </div>
       </div>
     </div>
+{% endif %}
+{% if user.is_authenticated %}
+
+<div class="slider text-center">
+  <p>DÚVIDAS FREQUENTES</p>
+</div>
+
+{% endif %}
   <div class="slider text-center">
     <p>Para obter mais informações sobre novos pacotes, serviços e tirar duvidads sobre problemas em PC's basta se cadastrar. Após o cadastro concluído, o cliente pode tiar suas dúvidas sobre as formas de pagamento.</p>
     <a href="{% url 'cadastro' %}">
