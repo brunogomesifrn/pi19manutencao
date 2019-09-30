@@ -70,4 +70,21 @@ def dados(request, id):
 	}
 	return render(request, 'cadastro.html', contexto)
 
+
+def editar(request, id):
+	responder = Forum.objects.get(pk=id)
+	form = ForumForm(request.POST or None, request.FILES or None, instance = forum)
+	if form.is_valid():
+		form.save()
+		return redirect('perfil')
+	contexto = {
+		'form' : form
+	}
+	return render(request, 'cadastrar_pergunta.html', contexto)
+
+def apagar(request, id):
+	apagar = Forum.objects.get(pk=id)
+	apagar.delete()
+	return redirect('perfil')
+
 # Create your views here.

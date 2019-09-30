@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastrar_pergunta
+from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastrar_pergunta, editar, apagar
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
 
+    path('apagar/<int:id>', apagar, name='apagar'),
+    path('editar/<int:id>', editar, name='editar'),
     path('cadastrar_pergunta', cadastrar_pergunta, name='cadastrar_pergunta'),
     path('pergunta', pergunta_listar, name='pergunta'),
 	path('', index, name='index'),
