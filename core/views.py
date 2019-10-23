@@ -87,4 +87,13 @@ def apagar(request, id):
 	apagar.delete()
 	return redirect('perfil')
 
+
+def problema1(request):
+	return render(request, "problema1.html")
+
+def problema2(request):
+	return render(request, "problema2.html")
+
+def problema3(request):
+	return render(request, "problema3.html")
 # Create your views here.

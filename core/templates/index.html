@@ -119,16 +119,67 @@
 
 <div class="slider text-center">
   <p>DÚVIDAS FREQUENTES</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="big-box">
+          <div class="col-lg-12">
+            <div class="col-md-4">
+              <div class="box-bg">
+                <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.9s">
+                  <div class="align-center"><!--essa parte do <i> é a responsável pela imagem -->
+                    <a href="{% url 'problema1' %}">
+                    <i class="fas fa-keyboard fa-5x"></i>
+                  </a>
+                    <h4 class="text-bold">Computador reiniciando</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-bg">
+                <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.6s">
+                  <div class="align-center">
+                    <a href="{% url 'problema2' %}">
+                    <i class="fas fa-file-code fa-5x"></i>
+                    </a>
+                    <h4 class="text-bold">Computador não liga</h4>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-bg">
+                <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
+                  <div class="align-center">
+                  <a href="{% url 'problema3' %}">
+                   <i class="fas fa-laptop-code fa-5x"></i>
+                  </a>
+                    <h4 class="text-bold">Computador liga, mas não
+gera imagem </h4>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </div>
 
 {% endif %}
+
+{% if not user.is_authenticated %}
   <div class="slider text-center">
     <p>Para obter mais informações sobre novos pacotes, serviços e tirar duvidads sobre problemas em PC's basta se cadastrar. Após o cadastro concluído, o cliente pode tiar suas dúvidas sobre as formas de pagamento.</p>
     <a href="{% url 'cadastro' %}">
         <button>cadastre-se</button>
     </a>
   </div>
-
+{% endif %}
 
 
     <div class="slider text-center">
@@ -144,13 +195,6 @@
     <p>Soares Manutenção é um site voltado para oferecer serviços de manutenção, onde o cliente tem uma visão sobre alguns dos pacotes oferecidos e a liberdade de procura por novos pacotes com negociação de pagamento exclusiva com o mantenedoro.</p>
   </div>
   <br>
-
-
-     <div class="slider text-center">
-   <p>aqui tem que aparecer os comentários, mas só depois que a pessoa tiver feito o login</p>
-   <br/>
-    </div>
-
 
 
   </div>
