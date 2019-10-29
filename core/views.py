@@ -96,4 +96,13 @@ def problema2(request):
 
 def problema3(request):
 	return render(request, "problema3.html")
+
+def problema4(request):
+	return render(request, "problema4.html")
+
+def problema5(request):
+	return render(request, "problema5.html")
+
+def problema6(request):
+	return render(request, "problema6.html")
 # Create your views here.

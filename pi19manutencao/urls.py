@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastrar_pergunta, editar, apagar, problema1, problema2, problema3
+from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastrar_pergunta, editar, apagar, problema1, problema2, problema3, problema4, problema5, problema6
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -23,6 +23,9 @@ urlpatterns = [
     path('problema1/', problema1, name='problema1'),
     path('problema2/', problema2, name='problema2'),
     path('problema3/', problema3, name='problema3'),
+    path('problema4/', problema4, name='problema4'),
+    path('problema5/', problema5, name='problema5'),
+    path('problema6/', problema6, name='problema6'),
     path('apagar/<int:id>', apagar, name='apagar'),
     path('editar/<int:id>', editar, name='editar'),
     path('cadastrar_pergunta', cadastrar_pergunta, name='cadastrar_pergunta'),
