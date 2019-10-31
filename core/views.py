@@ -105,4 +105,8 @@ def problema5(request):
 
 def problema6(request):
 	return render(request, "problema6.html")
+
+def paginatexte(request):
+	return render(request, "paginatexte.html")
+
 # Create your views here.
