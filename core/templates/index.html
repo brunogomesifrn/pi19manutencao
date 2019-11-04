@@ -38,7 +38,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h1><a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">			Soares Manutenção
+            <h1><a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">Soares Manutenção
 						</a></h1>
           </div>
           <div class="col-md-8">
@@ -117,8 +117,14 @@
 
 {% if user.is_authenticated %}
 
+
+
 <div class="slider text-center">
   <p>DÚVIDAS FREQUENTES</p>
+
+  <div class="slider text-center">
+<p> </p>
+  </div>
 
     <div class="container">
       <div class="row">
@@ -165,7 +171,7 @@
                 <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.9s">
                   <div class="align-center"><!--essa parte do <i> é a responsável pela imagem -->
                     <a href="{% url 'problema4' %}">
-                    <i class="fas fa-power-off fa-5x"></i>
+                    <i class="fas fa-file-code fa-5x"></i>
                   </a>
                     <h4 class="text-bold">Computador liga, mas fica com a tela preta e fazendo barulho (apitando)</h4>
                   </div>
@@ -189,7 +195,7 @@
                 <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.9s">
                   <div class="align-center"><!--essa parte do <i> é a responsável pela imagem -->
                     <a href="{% url 'problema6' %}">
-                    <i class="fas fa-power-off fa-5x"></i>
+                    <i class="fas fa-desktop fa-5x"></i>
                   </a>
                     <h4 class="text-bold">Travamento aleatório do computador</h4>
                   </div>
@@ -207,7 +213,7 @@
 
 {% if not user.is_authenticated %}
   <div class="slider text-center">
-    <p>Para obter mais informações sobre novos pacotes, serviços e tirar duvidads sobre problemas em PC's basta se cadastrar. Após o cadastro concluído, o cliente pode tiar suas dúvidas sobre as formas de pagamento.</p>
+    <p>Para obter mais informações sobre novos pacotes, serviços e tirar duvidads sobre problemas em PC's basta se cadastrar. Após o cadastro concluído, o cliente pode tiar suas dúvidas sobre as formas de pagamento diretamente com o proprietário do Soares Manutenção.</p>
     <a href="{% url 'cadastro' %}">
         <button>cadastre-se</button>
     </a>
@@ -225,7 +231,7 @@
 
     <div class="slider text-center">
     <h4 class="text-bold">SOBRE</h4>
-    <p>Soares Manutenção é um site voltado para oferecer serviços de manutenção, onde o cliente tem uma visão sobre alguns dos pacotes oferecidos e a liberdade de procura por novos pacotes com negociação de pagamento exclusiva com o mantenedoro.</p>
+    <p>Soares Manutenção é um site voltado para oferecer serviços de manutenção, onde o cliente tem uma visão sobre alguns dos pacotes oferecidos e a liberdade de procura por novos pacotes, em conversas diratas com o proprietário do site.</p>
   </div>
   <br>
 
@@ -245,7 +251,11 @@
 
               <li><a href="https://instagram.com/miih_lopes3?igshid=1tmwmaghd1387" class="icoInstagram" title="Desenvolvedora Mirlayne Lopes"><i class="fa fa-instagram"></i></a></li>
 
+{% if user.is_authenticated %}
+
               <li><a href="https://instagram.com/david_s_carvalho?igshid=1afoxg7eiyn5m" class="icoInstagram" title="Proprietario da página, David Soares"><i class="fa fa-instagram"></i></a></li>
+
+{% endif %}
 
             </ul>
           </div>
