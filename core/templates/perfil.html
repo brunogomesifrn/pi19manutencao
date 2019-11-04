@@ -11,33 +11,10 @@
 
 <div class="d1">
 <p><a href="{% url 'dados' user.id %}"> Meus dados</a></p>
-</div>
 
 
-<h2>Olá {{ user.username }}, caso queira tirar alguma dúdiva se sinta a vontade para fazer perguntas</h2>
+<h2>Olá {{ user.username }}, caso queira tirar alguma dúdiva se sinta a vontade para entrar em contato com a Soares Manutenção</h2>
 
-
-<h1>Cadastrar perguntas</h1>
-<div class="d1">
-<a href="{% url 'cadastrar_pergunta' %}">
-<button type="button">Cadastrar</button>
-</a>
-
-
-<p>lista de perguntas:</p>
-{% for forum in lista_forum %}
-
-<p>{{forum.pergunta}} | <a href="{% url 'editar' forum.id %}"> RESPONDER</a> | <a href="{% url 'apagar' forum.id %}">EXCLUIR</a>
-</p>
-{% empty %}
-<p>nenhuma pergunta cadastrada</p>
-{% endfor %}
-
-
-</div>
-
-
-<div class="d1">
 <p><a href="{% url 'logout' %}">Sair</a></p>
 </div>
 
