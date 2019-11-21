@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Perguntas</h1>
+<form method="post">
+	{% csrf_token %}
+	<p>{{form.pergunta.label}}: {{form.pergunta}}</p>
+	
+	<p>{{form.resposta.label}}: {{form.resposta}}</p>
+	<button type="submit">salvar</button>
+
+
+
+
+</form>
+
+</body>
+</html>

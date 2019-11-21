@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Página de Cadastro</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo2.css' %}">
+</head>
+<body>
+<h1>Cadastro de Usuário</h1>
+<form method="post">
+	{% csrf_token %}
+	<div class="d1">
+
+	{{form.username.errors}}
+	<p> Usuário: {{ form.username }}</p>
+	{{form.password1.errors}}
+	<p> Senha: {{ form.password1 }}</p>
+	{{form.password2.errors}}
+	<p> Repetir a senha: {{ form.password2 }}</p>
+	<p><button type="submit">Salvar</button></p>
+	<nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 " href="{% url 'perfil' %}">Voltar</a>
+	</nav>
+	</div>
+
+</form>
+</body>
+</html>
