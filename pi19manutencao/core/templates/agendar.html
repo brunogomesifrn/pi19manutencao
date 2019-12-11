@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Página de Perfil</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo2.css' %}">
+</head>
+<body>
+<h1>Página de Perfil</h1>
+
+<div class="d1">
+<h2>Qual serviço gostaria de agendar?</h2>
+
+{% for servico in servicos %}
+	<p><a href="{% url 'agendar_servico' servico.id %}">{{servico.descricao}} - R${{servico.preco}}</a></p>
+{% endfor %}
+</div>
+
+</body>
+</html>

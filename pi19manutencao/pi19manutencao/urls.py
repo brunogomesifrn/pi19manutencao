@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastrar_pergunta, editar, apagar, problema1, problema2, problema3, problema4, problema5, problema6
+from core.views import index, perfil, cadastro, dados, pergunta_listar, cadastrar_pergunta, editar, apagar, problema1, problema2, problema3, problema4, problema5, problema6, agendar, agendar_servico, agendamentos, cadastrar_servico
 from django.contrib.auth import views as auth_views
 from core.views import paginatexte
 urlpatterns = [
@@ -38,4 +38,8 @@ urlpatterns = [
 	path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
+    path('agendar/', agendar, name='agendar'),
+    path('agendar/<int:id>/', agendar_servico, name="agendar_servico"),
+    path('agendamentos/', agendamentos, name="agendamentos"),
+    path('servico/cadastrar', cadastrar_servico, name="cadastrar_servico"),
 ]

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Meus agendamentos</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo2.css' %}">
+</head>
+<body>
+<h1>Meus agendamentos</h1>
+
+<div class="d1">
+<h2>Agendamentos de {{user.username}}</h2>
+
+
+{% for agendamento in agendamentos %}
+	<p>{{agendamento.servico.descricao}} - {{agendamento.horario}} (R${{agendamento.servico.preco}})</p>
+{% endfor %}
+</div>
+
+</body>
+</html>
